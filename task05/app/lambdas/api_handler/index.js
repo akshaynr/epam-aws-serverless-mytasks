@@ -6,7 +6,7 @@ const client = new DynamoDBClient({});
 const docClient = DynamoDBDocumentClient.from(client);
 
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
     console.log(event);
 
     const currentDate = new Date();
