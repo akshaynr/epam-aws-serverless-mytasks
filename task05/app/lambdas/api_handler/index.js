@@ -25,10 +25,13 @@ exports.handler = async (event) => {
 
     const putResponse = await docClient.send(command);
     console.log(putResponse);
+    const result = {
+        event: putResponse
+    }
 
     const response = {
         statusCode: 201,
-        event: item,
+        body: result
     };
     return response;
 
